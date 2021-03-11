@@ -23,12 +23,14 @@ import _ from 'lodash';
                 (selectionChange)="onChange()"
                 [compareWith]="compareObjects"
         >
-          <div class="mat-option">
-            <input class="mat-input-element" placeholder="Type to search" (input)="onFilter($event.target.value)">
-          </div>
-          <mat-option *ngIf="!filteredOptionsLength" disabled>
-            <span>Nothing was found</span>
-          </mat-option>
+          <ng-container *ngIf="instance.component.searchEnabled">
+            <div class="mat-option">
+                <input class="mat-input-element" placeholder="Type to search" (input)="onFilter($event.target.value)">
+            </div>
+            <mat-option *ngIf="!filteredOptionsLength" disabled>
+                <span>Nothing was found</span>
+            </mat-option>
+          </ng-container>
           <mat-option *ngFor="let option of filteredOptions | async" [value]="option.value">
             <span [innerHTML]="option.label"></span>
           </mat-option>
@@ -46,7 +48,7 @@ export class MaterialSelectComponent extends MaterialComponent implements OnInit
   selectOptions: Promise<any[]>;
   filteredOptions: Promise<any[]>;
   filteredOptionsLength: number;
-  
+
   selectOptionsResolve: any;
 
   setInstance(instance: any) {
