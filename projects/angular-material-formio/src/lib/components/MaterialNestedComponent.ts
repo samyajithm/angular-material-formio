@@ -30,5 +30,6 @@ export class MaterialNestedComponent extends MaterialComponent implements AfterV
   ngAfterViewInit() {
     this.components.changes.subscribe(() => this.render());
     this.render();
+    super.ngAfterViewInit();
   }
 }
