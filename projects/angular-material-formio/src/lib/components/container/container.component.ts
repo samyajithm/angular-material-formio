@@ -4,9 +4,13 @@ import ContainerComponent from 'formiojs/components/container/Container.js';
 @Component({
   selector: 'mat-formio-container',
   template: `
-    <div fxLayout="column" fxLayoutGap="1em">
+    <span matFormioLabel [instance]="instance"></span>
+    <mat-icon *ngIf="instance.component.tooltip" matSuffix
+              matTooltip="{{ instance.component.tooltip }}" style="font-size: 1rem;">info
+    </mat-icon>
+<!--    <div fxLayout="column" fxLayoutGap="1em">-->
       <ng-template #components></ng-template>
-    </div>`
+<!--    </div>-->`
 })
 export class MaterialContainerComponent extends MaterialNestedComponent { }
 ContainerComponent.MaterialComponent = MaterialContainerComponent;
