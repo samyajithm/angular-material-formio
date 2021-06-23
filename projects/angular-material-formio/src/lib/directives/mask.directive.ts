@@ -1,5 +1,5 @@
 import { Directive, ElementRef, forwardRef, Input } from '@angular/core';
-import {MAT_INPUT_VALUE_ACCESSOR} from '@angular/material';
+import { MAT_INPUT_VALUE_ACCESSOR } from '@angular/material/input';
 import {NG_VALUE_ACCESSOR} from '@angular/forms';
 
 @Directive({
