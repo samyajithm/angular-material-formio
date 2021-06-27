@@ -1,6 +1,6 @@
 {
   "name": "@samyajithm/angular-material-formio",
-  "version": "2.0.0-beta.1.1",
+  "version": "2.0.0-beta.1.3",
   "peerDependencies": {
     "@angular/cdk": "^9.0.0 | ^10.0.0 | ^11.0.0",
     "@angular/common": "^9.0.0 | ^10.0.0 | ^11.0.0",

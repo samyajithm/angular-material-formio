@@ -72,7 +72,8 @@ export class FormioComponent extends FormioBaseComponent {
     form.instance = form.create(this.form.display);
     form.instance.viewContainer = () => this.formioViewContainer;
     if (this.submission && this.submission.data) {
-      form.instance.data = this.submission.data;
+      // form.instance.data = this.submission.data;
+      form.instance._submission = this.submission;
     }
     this.ngZone.run(() => form.instance.setForm(this.form, flags)
       .then(() => form.readyResolve(form.instance))
