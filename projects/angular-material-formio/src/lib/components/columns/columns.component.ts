@@ -5,13 +5,14 @@ import ColumnsComponent from 'formiojs/components/columns/Columns.js';
 @Component({
   selector: 'mat-formio-columns',
   template: `
-    <div class="container"
-         fxLayout="row"
+    <div fxLayout="row"
          fxLayout.xs="column"
          fxLayoutWrap
          fxLayoutGap="{{ flexGap }}%"
-         fxLayoutAlign="center"
+         fxLayoutAlign="flex-start"
     >
+      <!--todo 29-04-2021 MSamyajith: If checked HideLabel is undefined from builder-->
+      <span *ngIf="instance.component.hideLabel == false" matFormioLabel [instance]="instance"></span>
       <div
         *ngFor="let column of instance.component.columns; let i = index"
         [fxFlex]="flexWidth(column, i)"
