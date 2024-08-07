@@ -1,4 +1,4 @@
-import {Component, ViewChild} from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { MaterialNestedComponent } from '../MaterialNestedComponent';
 import DataGridComponent from 'formiojs/components/datagrid/DataGrid.js';

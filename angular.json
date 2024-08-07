@@ -20,7 +20,12 @@
               "tsConfig": "projects/angular-material-formio/tsconfig.lib.prod.json"
             }
           }
-        },
+        ,          "configurations": {
+            "production": {
+              "tsConfig": "projects/angular-material-formio/tsconfig.lib.prod.json"
+            }
+          }
+},
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {

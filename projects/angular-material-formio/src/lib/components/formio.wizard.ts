@@ -43,11 +43,11 @@ export class MaterialWizardComponent extends MaterialNestedComponent {
 
   updatePages(instance = this.instance) {
     if (this.prevNumOfPages !== instance.pages.length) {
-    instance.pages.forEach((page, pageIndex) => {
-      page.viewContainer = () => {
-        return this.viewContainers ? this.viewContainers[pageIndex] : null;
-      };
-    });
+      instance.pages.forEach((page, pageIndex) => {
+        page.viewContainer = () => {
+          return this.viewContainers ? this.viewContainers[pageIndex] : null;
+        };
+      });
       this.prevNumOfPages = instance.pages.length;
     }
   }
