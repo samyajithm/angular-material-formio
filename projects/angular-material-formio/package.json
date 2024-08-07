@@ -11,8 +11,8 @@
   },
   "dependencies": {
     "tslib": "^2.0.0",
-    "@formio/angular": "^5.0.0-rc.4",
-    "formiojs": "^4.12.4-rc.3"
+    "@formio/angular": "^6.0.0",
+    "formiojs": "^4.18.0"
   },
   "main": "src/public-api.ts",
   "description": "This library introduces the powerful Form.io JSON forms into the Angular Material framework.",
